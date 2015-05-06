@@ -1,0 +1,2 @@
+# ansible-amimoto-wordpress-update
+複数ある網元サイトのWordPressを一括でアップデートするAnsible Playbook
