@@ -1,0 +1,7 @@
+[amimoto]
+  ansible-test
+  ansible-test2
+  
+[amimoto:vars]
+  wp_cli_dir=/usr/local/bin
+  wordpress_dir=/var/www/vhosts

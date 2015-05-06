@@ -1,0 +1,12 @@
+---
+- name: Update core
+  shell: '{{ wp_cli_dir }}/wp core update --path={{ wordpress_dir }}/{{ ohai_ec2["instance_id"] }} --allow-root'
+
+- name: Update plugin
+  shell: '{{ wp_cli_dir }}/wp plugin update --all --path={{ wordpress_dir }}/{{ ohai_ec2["instance_id"] }} --allow-root'
+  
+- name: Update theme
+  shell: '{{ wp_cli_dir }}/wp theme update --all --path={{ wordpress_dir }}/{{ ohai_ec2["instance_id"] }} --allow-root'
+
+- name: WordPress update db
+  shell: '{{ wp_cli_dir }}/wp core update-db --path={{ wordpress_dir }}/{{ ohai_ec2["instance_id"] }} --allow-root'
